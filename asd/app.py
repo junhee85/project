@@ -35,3 +35,11 @@ st.write(
 )
 fig = sns.pairplot(tips, hue="size")
 st.pyplot(fig)
+st.write(
+    '''
+    ### 인원수와 팁의 상관관계
+    '''
+)
+fig = plt.figure(figsize=(8, 4))
+sns.boxplot(x='size', y='total_bill', data=tips)
+st.pyplot(fig)
