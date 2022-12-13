@@ -12,3 +12,12 @@ st.write(
 # https://seong6496.tistory.com/269
 df = pd.read_csv('./opendata/data.csv', encoding='cp949')
 st.write(df)
+import seaborn as sns
+titanic = sns.load_dataset('titanic')
+titanic.head()
+titanic.tail()
+titanic.info()
+titanic.describe()
+sns.histplot(data=titanic, x='age')
+sns.histplot(data=titanic, x='age', bins=10)
+sns.kdeplot(data=titanic, x='age')
